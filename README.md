@@ -15,6 +15,6 @@ C++ 기반 Open CV를 이용한 영상처리 프로젝트
 
 ### 참고
 - 점자일람표
-![alt text](http://gbwwel.or.kr/img/jumja.jpg)
-참고: http://gbwwel.or.kr/kunsolution/document.php?code=7-4
+![텍스트](http://gbwwel.or.kr/img/jumja.jpg)
+-- 참고: http://gbwwel.or.kr/kunsolution/document.php?code=7-4
 

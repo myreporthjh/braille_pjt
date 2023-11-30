@@ -2,3 +2,7 @@
 
 # braille_pjt
 //hello world
+
+
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=footer&text=Braille%20Project&fontSize=90)

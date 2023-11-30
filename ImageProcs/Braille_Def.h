@@ -2,88 +2,262 @@
 
 #include "Common.h"
 
+vector<string> moum{ "110001", // ëª¨ìŒ + ëª¨ìŒì•½ì
+                     "001110",
+                     "011100",
+                     "100011",
+                     "101001",
+                     "001101",
+                     "101100",
+                     "100101",
+                     "010101",
+                     "101010",
+                     "111010",
+                     "001110",
+                     "101110",
+                     "001100",
+                     "111001",
+                     "111001",
+                     "111100",
+                     "111100",
+                     "101100",
+                     "010111",
+                     "100111",
+                     "011111",
+                     "011110",
+                     "100001",
+                     "110011",
+                     "110111",
+                     "101101",
+                     "111011",
+                     "111111",
+                     "110110",
+                     "111101",
+                     "101011",
+                     "011101",
+                     "111110" };
+
+vector<string> doinsori{ "000100",
+/*ëœì†Œë¦¬ ì˜ˆì™¸*/           "010100",
+                         "000110",
+                         "000001",
+                         "000101" };
+
+vector<string> excep{ "000111",
+                      "001100",
+                      "000001",
+                      "001110",
+                      "101100",
+                      "111001",
+                      "111100",
+                      "100100",
+                      "010100",
+                      "100010",
+                      "000110",
+                      "000101",
+                      "110100",
+                      "110010",
+                      "100110",
+                      "010110" };
+
 void brailleInit(map<string, vector<string>>& koreanBrailleMap)
 {
-    koreanBrailleMap["000100"].push_back("¤¡");
-    koreanBrailleMap["000001 000100"].push_back("¤¢");
-    koreanBrailleMap["100100"].push_back("¤¤");
-    koreanBrailleMap["010100"].push_back("¤§");
-    koreanBrailleMap["000001 010100"].push_back("¤¨");
-    koreanBrailleMap["000010"].push_back("¤©");
-    koreanBrailleMap["100010"].push_back("¤±");
-    koreanBrailleMap["000110"].push_back("¤²");
-    koreanBrailleMap["000001 000110"].push_back("¤³");
-    koreanBrailleMap["000001"].push_back("¤µ");
-    koreanBrailleMap["000001 000001"].push_back("¤¶");
-    koreanBrailleMap["000000"].push_back("¤·");
-    koreanBrailleMap["000101"].push_back("¤¸");
-    koreanBrailleMap["000001 000101"].push_back("¤¹");
-    koreanBrailleMap["000011"].push_back("¤º");
-    koreanBrailleMap["110100"].push_back("¤»");
-    koreanBrailleMap["110010"].push_back("¤¼");
-    koreanBrailleMap["100110"].push_back("¤½");
-    koreanBrailleMap["010110"].push_back("¤¾");
-    koreanBrailleMap["100000"].push_back("¤¡");
-    koreanBrailleMap["010010"].push_back("¤¤");
-    koreanBrailleMap["001010"].push_back("¤§");
-    koreanBrailleMap["010000"].push_back("¤©");
-    koreanBrailleMap["010001"].push_back("¤±");
-    koreanBrailleMap["110000"].push_back("¤²");
-    koreanBrailleMap["001000"].push_back("¤µ");
-    koreanBrailleMap["011011"].push_back("¤·");
-    koreanBrailleMap["101000"].push_back("¤¸");
-    koreanBrailleMap["011000"].push_back("¤º");
-    koreanBrailleMap["011010"].push_back("¤»");
-    koreanBrailleMap["011001"].push_back("¤¼");
-    koreanBrailleMap["010011"].push_back("¤½");
-    koreanBrailleMap["001011"].push_back("¤¾");
-    koreanBrailleMap["001100"].push_back("¤¶");
-    koreanBrailleMap["110001"].push_back("¤¿");
-    koreanBrailleMap["001110"].push_back("¤Á");
-    koreanBrailleMap["011100"].push_back("¤Ã");
-    koreanBrailleMap["100011"].push_back("¤Å");
-    koreanBrailleMap["101001"].push_back("¤Ç");
-    koreanBrailleMap["001101"].push_back("¤Ë");
-    koreanBrailleMap["101100"].push_back("¤Ì");
-    koreanBrailleMap["100101"].push_back("¤Ğ");
-    koreanBrailleMap["010101"].push_back("¤Ñ");
-    koreanBrailleMap["101010"].push_back("¤Ó");
-    koreanBrailleMap["111010"].push_back("¤À");
-    koreanBrailleMap["001110 111010"].push_back("¤Â");
-    koreanBrailleMap["101110"].push_back("¤Ä");
-    koreanBrailleMap["001100"].push_back("¤Æ");
-    koreanBrailleMap["111001"].push_back("¤È");
-    koreanBrailleMap["111001 111010"].push_back("¤É");
-    koreanBrailleMap["101111"].push_back("¤Ê");
-    koreanBrailleMap["111100"].push_back("¤Í");
-    koreanBrailleMap["111100 111010"].push_back("¤Î");
-    koreanBrailleMap["101100 111010"].push_back("¤Ï");
-    koreanBrailleMap["010111"].push_back("¤Ò");
-    koreanBrailleMap["110101"].push_back("°¡");
-    koreanBrailleMap["100100"].push_back("³ª");
-    koreanBrailleMap["010100"].push_back("´Ù");
-    koreanBrailleMap["100010"].push_back("¸¶");
-    koreanBrailleMap["000110"].push_back("¹Ù");
-    koreanBrailleMap["111000"].push_back("»ç");
-    koreanBrailleMap["000101"].push_back("ÀÚ");
-    koreanBrailleMap["110100"].push_back("Ä«");
-    koreanBrailleMap["110010"].push_back("Å¸");
-    koreanBrailleMap["100110"].push_back("ÆÄ");
-    koreanBrailleMap["010110"].push_back("ÇÏ");
-    koreanBrailleMap["100111"].push_back("¾ï");
-    koreanBrailleMap["011111"].push_back("¾ğ");
-    koreanBrailleMap["011110"].push_back("¾ó");
-    koreanBrailleMap["100001"].push_back("¿¬");
-    koreanBrailleMap["110011"].push_back("¿­");
-    koreanBrailleMap["110111"].push_back("¿µ");
-    koreanBrailleMap["101101"].push_back("¿Á");
-    koreanBrailleMap["111011"].push_back("¿Â");
-    koreanBrailleMap["111111"].push_back("¿Ë");
-    koreanBrailleMap["110110"].push_back("¿î");
-    koreanBrailleMap["111101"].push_back("¿ï");
-    koreanBrailleMap["101011"].push_back("Àº");
-    koreanBrailleMap["011101"].push_back("À»");
-    koreanBrailleMap["111110"].push_back("ÀÎ");
-    koreanBrailleMap["000111 011100"].push_back("°Í");
-    koreanBrailleMap["001100"].push_back("¤¶¹ŞÄ§");
+    koreanBrailleMap["000100"].push_back("ã„±");
+    koreanBrailleMap["000001"].push_back("ã„²"); //  000100
+    koreanBrailleMap["100100"].push_back("ã„´");
+    koreanBrailleMap["010100"].push_back("ã„·");
+    koreanBrailleMap["000001"].push_back("ã„¸"); //  010100
+    koreanBrailleMap["000010"].push_back("ã„¹");
+    koreanBrailleMap["100010"].push_back("ã…");
+    koreanBrailleMap["000110"].push_back("ã…‚");
+    koreanBrailleMap["000001"].push_back("ã…ƒ"); //  000110
+    koreanBrailleMap["000001"].push_back("ã……");
+    koreanBrailleMap["000001"].push_back("ã…†"); //  000001
+    koreanBrailleMap["000000"].push_back(" ");
+    koreanBrailleMap["000101"].push_back("ã…ˆ");
+    koreanBrailleMap["000001"].push_back("ã…‰"); //  000101
+    koreanBrailleMap["000011"].push_back("ã…Š");
+    koreanBrailleMap["110100"].push_back("ã…‹");
+    koreanBrailleMap["110010"].push_back("ã…Œ");
+    koreanBrailleMap["100110"].push_back("ã…");
+    koreanBrailleMap["010110"].push_back("ã…");
+    koreanBrailleMap["100000"].push_back("ã„±");
+    koreanBrailleMap["010010"].push_back("ã„´");
+    koreanBrailleMap["001010"].push_back("ã„·");
+    koreanBrailleMap["010000"].push_back("ã„¹");
+    koreanBrailleMap["010001"].push_back("ã…");
+    koreanBrailleMap["110000"].push_back("ã…‚");
+    koreanBrailleMap["001000"].push_back("ã……");
+    koreanBrailleMap["011011"].push_back("ã…‡");
+    koreanBrailleMap["101000"].push_back("ã…ˆ");
+    koreanBrailleMap["011000"].push_back("ã…Š");
+    koreanBrailleMap["011010"].push_back("ã…‹");
+    koreanBrailleMap["011001"].push_back("ã…Œ");
+    koreanBrailleMap["010011"].push_back("ã…");
+    koreanBrailleMap["001011"].push_back("ã…");
+    koreanBrailleMap["001100"].push_back("ã…†");
+    koreanBrailleMap["110001"].push_back("ã…");
+    koreanBrailleMap["001110"].push_back("ã…‘");
+    koreanBrailleMap["011100"].push_back("ã…“");
+    koreanBrailleMap["100011"].push_back("ã…•");
+    koreanBrailleMap["101001"].push_back("ã…—");
+    koreanBrailleMap["001101"].push_back("ã…›");
+    koreanBrailleMap["101100"].push_back("ã…œ");
+    koreanBrailleMap["100101"].push_back("ã… ");
+    koreanBrailleMap["010101"].push_back("ã…¡");
+    koreanBrailleMap["101010"].push_back("ã…£");
+    koreanBrailleMap["111010"].push_back("ã…");
+    koreanBrailleMap["001110"].push_back("ã…’"); //  111010
+    koreanBrailleMap["101110"].push_back("ã…”");
+    koreanBrailleMap["001100"].push_back("ã…–");
+    koreanBrailleMap["111001"].push_back("ã…˜");
+    koreanBrailleMap["111001"].push_back("ã…™"); //  111010
+    koreanBrailleMap["101111"].push_back("ã…š");
+    koreanBrailleMap["111100"].push_back("ã…");
+    koreanBrailleMap["111100"].push_back("ã…"); //  111010
+    koreanBrailleMap["101100"].push_back("ã…Ÿ"); //  111010
+    koreanBrailleMap["010111"].push_back("ã…¢");
+    koreanBrailleMap["110101"].push_back("ê°€");
+    koreanBrailleMap["100100"].push_back("ë‚˜");
+    koreanBrailleMap["010100"].push_back("ë‹¤");
+    koreanBrailleMap["100010"].push_back("ë§ˆ");
+    koreanBrailleMap["000110"].push_back("ë°”");
+    koreanBrailleMap["111000"].push_back("ì‚¬");
+    koreanBrailleMap["000101"].push_back("ì");
+    koreanBrailleMap["110100"].push_back("ì¹´");
+    koreanBrailleMap["110010"].push_back("íƒ€");
+    koreanBrailleMap["100110"].push_back("íŒŒ");
+    koreanBrailleMap["010110"].push_back("í•˜");
+    koreanBrailleMap["100111"].push_back("ì–µ");
+    koreanBrailleMap["011111"].push_back("ì–¸");
+    koreanBrailleMap["011110"].push_back("ì–¼");
+    koreanBrailleMap["100001"].push_back("ì—°");
+    koreanBrailleMap["110011"].push_back("ì—´");
+    koreanBrailleMap["110111"].push_back("ì˜");
+    koreanBrailleMap["101101"].push_back("ì˜¥");
+    koreanBrailleMap["111011"].push_back("ì˜¨");
+    koreanBrailleMap["111111"].push_back("ì˜¹");
+    koreanBrailleMap["110110"].push_back("ìš´");
+    koreanBrailleMap["111101"].push_back("ìš¸");
+    koreanBrailleMap["101011"].push_back("ì€");
+    koreanBrailleMap["011101"].push_back("ì„");
+    koreanBrailleMap["111110"].push_back("ì¸");
+    koreanBrailleMap["000111"].push_back("ê²ƒ"); //  011100
+}
+
+void brailleExceptionInit(map<string, vector<string>>& BrailleEx)
+{
+    BrailleEx["000001"].push_back("ã……");
+    BrailleEx["000001"].push_back("ã„²"); //  000100
+    BrailleEx["000001"].push_back("ã„¸"); //  010100
+    BrailleEx["000001"].push_back("ã…ƒ"); //  000110  
+    BrailleEx["000001"].push_back("ã…†"); //  000001
+    BrailleEx["000001"].push_back("ã…‰"); //  000101
+
+    BrailleEx["000111"].push_back("ê²ƒ"); //  011100
+
+    BrailleEx["001100"].push_back("ã…†"); // ì¢…ì„±
+    BrailleEx["001100"].push_back("ã…–");
+
+    BrailleEx["100100"].push_back("ã„´");
+    BrailleEx["100100"].push_back("ë‚˜");
+    BrailleEx["010100"].push_back("ã„·");
+    BrailleEx["010100"].push_back("ë‹¤");
+    BrailleEx["100010"].push_back("ã…");
+    BrailleEx["100010"].push_back("ë§ˆ");
+    BrailleEx["000110"].push_back("ã…‚");
+    BrailleEx["000110"].push_back("ë°”");
+    BrailleEx["000101"].push_back("ã…ˆ");
+    BrailleEx["000101"].push_back("ì");
+    BrailleEx["110100"].push_back("ã…‹");
+    BrailleEx["110100"].push_back("ì¹´");
+    BrailleEx["110010"].push_back("ã…Œ");
+    BrailleEx["110010"].push_back("íƒ€");
+    BrailleEx["100110"].push_back("ã…");
+    BrailleEx["100110"].push_back("íŒŒ");
+    BrailleEx["010110"].push_back("ã…");
+    BrailleEx["010110"].push_back("í•˜");
+
+    BrailleEx["001110"].push_back("ã…‘");
+    BrailleEx["001110"].push_back("ã…’"); //  111010
+    BrailleEx["101100"].push_back("ã…œ");
+    BrailleEx["101100"].push_back("ã…Ÿ"); //  111010
+    BrailleEx["111001"].push_back("ã…˜");
+    BrailleEx["111001"].push_back("ã…™"); //  111010
+    BrailleEx["111100"].push_back("ã…");
+    BrailleEx["111100"].push_back("ã…"); //  111010    
+}
+
+void div_exc_index(string letter, int& index)
+{
+    if (letter == excep[0]) //ê²ƒ
+    {
+        index = 1;
+    }
+    else if (letter == excep[1]) // ã…†,ã…–
+    {
+        index = 2;
+    }
+    else if (letter == excep[2])    // ã……ã„²ã„¸ã…†ã…‰ã…ƒ
+    {
+        index = 3;
+    }
+    else if (letter == excep[3] ||letter == excep[4] ||letter == excep[5] ||letter == excep[6])    //ã…‘ã…˜ã…ã…œ
+    {
+        index = 4;
+    }
+    else if (letter == excep[7] || letter == excep[8] || letter == excep[9] || letter == excep[10] || letter == excep[11] ||
+             letter == excep[12] || letter == excep[13] || letter == excep[14] || letter == excep[15] )   // ã„´ã„·ã…ã…‚ã…ˆã…‹ã…Œã…ã…
+    {
+        index = 5;
+    }
+    else
+    {}
+}
+
+
+void check_moum(string letter, int& index)
+{
+    for (size_t i = 0; i < moum.size(); i++)
+    {
+        if (letter == moum[i])
+        {
+            index = 0;
+            break;
+        }
+        else
+        {
+            index = 1;
+        }
+    }
+}
+
+void check_doinsori(string letter, int& index, int& flag)
+{
+    flag = 0;
+    if (letter == doinsori[0])
+    {
+        index = 1;
+    }
+    else if (letter == doinsori[1])
+    {
+        index = 2;
+    }
+    else if (letter == doinsori[2])
+    {
+        index = 3;
+    }
+    else if (letter == doinsori[3])
+    {
+        index = 4;
+    }
+    else if (letter == doinsori[4])
+    {
+        index = 5;
+    }
+    else
+    {
+        index = 0;
+        flag = 1;
+    }
 }

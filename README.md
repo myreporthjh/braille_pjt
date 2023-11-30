@@ -14,9 +14,8 @@ C++ 기반 Open CV를 이용한 영상처리 프로젝트
 - 홍종현
 
 ### 참고
-- 점자일람표
-
-![텍스트](http://gbwwel.or.kr/img/jumja.jpg)
-
--- 참고: http://gbwwel.or.kr/kunsolution/document.php?code=7-4
-
+- 점자 일람표
+(http://gbwwel.or.kr/img/jumja.jpg)
+  - 참고: http://gbwwel.or.kr/kunsolution/document.php?code=7-4
+- 점자 번역기
+https://t.hi098123.com/braille

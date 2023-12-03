@@ -32,7 +32,7 @@ C++ 기반 Open CV를 이용한 영상처리 프로젝트
 - 결합 후 소리로 출력
 
 
-## 💡 참고 
+### 💡 참고 
 - 점자 일람표
   
 ![jumja](https://github.com/myreporthjh/braille_pjt/assets/24414939/f91a5bbf-fafd-436c-9e0b-59ea4691bf8c)

@@ -1,6 +1,6 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0B7627&background=FFFFFF00&center=true&vCenter=true&random=false&width=800&lines=%EC%A0%90.+%EC%A0%90.+%EC%A0%90.)](https://git.io/typing-svg)
 
-# 점점점(...)
+😎# 점점점(...)
 C++ 기반 Open CV를 이용한 영상처리 프로젝트 
 
 ## 프로젝트 소개

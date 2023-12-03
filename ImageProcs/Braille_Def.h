@@ -154,29 +154,29 @@ void brailleExceptionInit(map<string, vector<string>>& BrailleEx)
     BrailleEx["000001"].push_back("ㅆ"); //  000001
     BrailleEx["000001"].push_back("ㅉ"); //  000101
 
-    BrailleEx["000111"].push_back("것"); //  011100
+    BrailleEx["000111"].push_back("ㄱㅓㅅ"); //  011100
 
     BrailleEx["001100"].push_back("ㅆ"); // 종성
     BrailleEx["001100"].push_back("ㅖ");
 
     BrailleEx["100100"].push_back("ㄴ");
-    BrailleEx["100100"].push_back("나");
+    BrailleEx["100100"].push_back("ㄴㅏ");
     BrailleEx["010100"].push_back("ㄷ");
-    BrailleEx["010100"].push_back("다");
+    BrailleEx["010100"].push_back("ㄷㅏ");
     BrailleEx["100010"].push_back("ㅁ");
-    BrailleEx["100010"].push_back("마");
+    BrailleEx["100010"].push_back("ㅁㅏ");
     BrailleEx["000110"].push_back("ㅂ");
-    BrailleEx["000110"].push_back("바");
+    BrailleEx["000110"].push_back("ㅂㅏ");
     BrailleEx["000101"].push_back("ㅈ");
-    BrailleEx["000101"].push_back("자");
+    BrailleEx["000101"].push_back("ㅈㅏ");
     BrailleEx["110100"].push_back("ㅋ");
-    BrailleEx["110100"].push_back("카");
+    BrailleEx["110100"].push_back("ㅋㅏ");
     BrailleEx["110010"].push_back("ㅌ");
-    BrailleEx["110010"].push_back("타");
+    BrailleEx["110010"].push_back("ㅌㅏ");
     BrailleEx["100110"].push_back("ㅍ");
-    BrailleEx["100110"].push_back("파");
+    BrailleEx["100110"].push_back("ㅍㅏ");
     BrailleEx["010110"].push_back("ㅎ");
-    BrailleEx["010110"].push_back("하");
+    BrailleEx["010110"].push_back("ㅎㅏ");
 
     BrailleEx["001110"].push_back("ㅑ");
     BrailleEx["001110"].push_back("ㅒ"); //  111010

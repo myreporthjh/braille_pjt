@@ -81,21 +81,21 @@ void brailleInit(map<string, vector<string>>& koreanBrailleMap)
     koreanBrailleMap["110010"].push_back("ㅌ");
     koreanBrailleMap["100110"].push_back("ㅍ");
     koreanBrailleMap["010110"].push_back("ㅎ");
-    koreanBrailleMap["100000"].push_back("ㄱ");
-    koreanBrailleMap["010010"].push_back("ㄴ");
-    koreanBrailleMap["001010"].push_back("ㄷ");
-    koreanBrailleMap["010000"].push_back("ㄹ");
-    koreanBrailleMap["010001"].push_back("ㅁ");
-    koreanBrailleMap["110000"].push_back("ㅂ");
-    koreanBrailleMap["001000"].push_back("ㅅ");
-    koreanBrailleMap["011011"].push_back("ㅇ");
-    koreanBrailleMap["101000"].push_back("ㅈ");
-    koreanBrailleMap["011000"].push_back("ㅊ");
-    koreanBrailleMap["011010"].push_back("ㅋ");
-    koreanBrailleMap["011001"].push_back("ㅌ");
-    koreanBrailleMap["010011"].push_back("ㅍ");
-    koreanBrailleMap["001011"].push_back("ㅎ");
-    koreanBrailleMap["001100"].push_back("ㅆ");
+    koreanBrailleMap["100000"].push_back("ㄱ,");
+    koreanBrailleMap["010010"].push_back("ㄴ,");
+    koreanBrailleMap["001010"].push_back("ㄷ,");
+    koreanBrailleMap["010000"].push_back("ㄹ,");
+    koreanBrailleMap["010001"].push_back("ㅁ,");
+    koreanBrailleMap["110000"].push_back("ㅂ,");
+    koreanBrailleMap["001000"].push_back("ㅅ,");
+    koreanBrailleMap["011011"].push_back("ㅇ,");
+    koreanBrailleMap["101000"].push_back("ㅈ,");
+    koreanBrailleMap["011000"].push_back("ㅊ,");
+    koreanBrailleMap["011010"].push_back("ㅋ,");
+    koreanBrailleMap["011001"].push_back("ㅌ,");
+    koreanBrailleMap["010011"].push_back("ㅍ,");
+    koreanBrailleMap["001011"].push_back("ㅎ,");
+    koreanBrailleMap["001100"].push_back("ㅆ,");
     koreanBrailleMap["110001"].push_back("ㅏ");
     koreanBrailleMap["001110"].push_back("ㅑ");
     koreanBrailleMap["011100"].push_back("ㅓ");
@@ -128,21 +128,21 @@ void brailleInit(map<string, vector<string>>& koreanBrailleMap)
     koreanBrailleMap["110010"].push_back("ㅌㅏ");
     koreanBrailleMap["100110"].push_back("ㅍㅏ");
     koreanBrailleMap["010110"].push_back("ㅎㅏ");
-    koreanBrailleMap["100111"].push_back("ㅓㄱ");
-    koreanBrailleMap["011111"].push_back("ㅓㄴ");
-    koreanBrailleMap["011110"].push_back("ㅓㄹ");
-    koreanBrailleMap["100001"].push_back("ㅕㄴ");
-    koreanBrailleMap["110011"].push_back("ㅕㄹ");
-    koreanBrailleMap["110111"].push_back("ㅕㅇ");
-    koreanBrailleMap["101101"].push_back("ㅗㄱ");
-    koreanBrailleMap["111011"].push_back("ㅗㄴ");
-    koreanBrailleMap["111111"].push_back("ㅗㅇ");
-    koreanBrailleMap["110110"].push_back("ㅜㄴ");
-    koreanBrailleMap["111101"].push_back("ㅜㄹ");
-    koreanBrailleMap["101011"].push_back("ㅡㄴ");
-    koreanBrailleMap["011101"].push_back("ㅡㄹ");
-    koreanBrailleMap["111110"].push_back("ㅣㄴ");
-    koreanBrailleMap["000111"].push_back("ㄱㅓㅅ"); //  011100
+    koreanBrailleMap["100111"].push_back("ㅓㄱ,");
+    koreanBrailleMap["011111"].push_back("ㅓㄴ,");
+    koreanBrailleMap["011110"].push_back("ㅓㄹ,");
+    koreanBrailleMap["100001"].push_back("ㅕㄴ,");
+    koreanBrailleMap["110011"].push_back("ㅕㄹ,");
+    koreanBrailleMap["110111"].push_back("ㅕㅇ,");
+    koreanBrailleMap["101101"].push_back("ㅗㄱ,");
+    koreanBrailleMap["111011"].push_back("ㅗㄴ,");
+    koreanBrailleMap["111111"].push_back("ㅗㅇ,");
+    koreanBrailleMap["110110"].push_back("ㅜㄴ,");
+    koreanBrailleMap["111101"].push_back("ㅜㄹ,");
+    koreanBrailleMap["101011"].push_back("ㅡㄴ,");
+    koreanBrailleMap["011101"].push_back("ㅡㄹ,");
+    koreanBrailleMap["111110"].push_back("ㅣㄴ,");
+    koreanBrailleMap["000111"].push_back("ㄱㅓㅅ,"); //  011100
 }
 
 void brailleExceptionInit(map<string, vector<string>>& BrailleEx)
@@ -154,9 +154,9 @@ void brailleExceptionInit(map<string, vector<string>>& BrailleEx)
     BrailleEx["000001"].push_back("ㅆ"); //  000001
     BrailleEx["000001"].push_back("ㅉ"); //  000101
 
-    BrailleEx["000111"].push_back("ㄱㅓㅅ"); //  011100
+    BrailleEx["000111"].push_back("ㄱㅓㅅ,"); //  011100
 
-    BrailleEx["001100"].push_back("ㅆ"); // 종성
+    BrailleEx["001100"].push_back("ㅆ,"); // 종성
     BrailleEx["001100"].push_back("ㅖ");
 
     BrailleEx["100100"].push_back("ㄴ");

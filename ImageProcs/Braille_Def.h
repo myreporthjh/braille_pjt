@@ -117,32 +117,32 @@ void brailleInit(map<string, vector<string>>& koreanBrailleMap)
     koreanBrailleMap["111100"].push_back("ㅞ"); //  111010
     koreanBrailleMap["101100"].push_back("ㅟ"); //  111010
     koreanBrailleMap["010111"].push_back("ㅢ");
-    koreanBrailleMap["110101"].push_back("가");
-    koreanBrailleMap["100100"].push_back("나");
-    koreanBrailleMap["010100"].push_back("다");
-    koreanBrailleMap["100010"].push_back("마");
-    koreanBrailleMap["000110"].push_back("바");
-    koreanBrailleMap["111000"].push_back("사");
-    koreanBrailleMap["000101"].push_back("자");
-    koreanBrailleMap["110100"].push_back("카");
-    koreanBrailleMap["110010"].push_back("타");
-    koreanBrailleMap["100110"].push_back("파");
-    koreanBrailleMap["010110"].push_back("하");
-    koreanBrailleMap["100111"].push_back("억");
-    koreanBrailleMap["011111"].push_back("언");
-    koreanBrailleMap["011110"].push_back("얼");
-    koreanBrailleMap["100001"].push_back("연");
-    koreanBrailleMap["110011"].push_back("열");
-    koreanBrailleMap["110111"].push_back("영");
-    koreanBrailleMap["101101"].push_back("옥");
-    koreanBrailleMap["111011"].push_back("온");
-    koreanBrailleMap["111111"].push_back("옹");
-    koreanBrailleMap["110110"].push_back("운");
-    koreanBrailleMap["111101"].push_back("울");
-    koreanBrailleMap["101011"].push_back("은");
-    koreanBrailleMap["011101"].push_back("을");
-    koreanBrailleMap["111110"].push_back("인");
-    koreanBrailleMap["000111"].push_back("것"); //  011100
+    koreanBrailleMap["110101"].push_back("ㄱㅏ");
+    koreanBrailleMap["100100"].push_back("ㄴㅏ");
+    koreanBrailleMap["010100"].push_back("ㄷㅏ");
+    koreanBrailleMap["100010"].push_back("ㅁㅏ");
+    koreanBrailleMap["000110"].push_back("ㅂㅏ");
+    koreanBrailleMap["111000"].push_back("ㅅㅏ");
+    koreanBrailleMap["000101"].push_back("ㅈㅏ");
+    koreanBrailleMap["110100"].push_back("ㅋㅏ");
+    koreanBrailleMap["110010"].push_back("ㅌㅏ");
+    koreanBrailleMap["100110"].push_back("ㅍㅏ");
+    koreanBrailleMap["010110"].push_back("ㅎㅏ");
+    koreanBrailleMap["100111"].push_back("ㅓㄱ");
+    koreanBrailleMap["011111"].push_back("ㅓㄴ");
+    koreanBrailleMap["011110"].push_back("ㅓㄹ");
+    koreanBrailleMap["100001"].push_back("ㅕㄴ");
+    koreanBrailleMap["110011"].push_back("ㅕㄹ");
+    koreanBrailleMap["110111"].push_back("ㅕㅇ");
+    koreanBrailleMap["101101"].push_back("ㅗㄱ");
+    koreanBrailleMap["111011"].push_back("ㅗㄴ");
+    koreanBrailleMap["111111"].push_back("ㅗㅇ");
+    koreanBrailleMap["110110"].push_back("ㅜㄴ");
+    koreanBrailleMap["111101"].push_back("ㅜㄹ");
+    koreanBrailleMap["101011"].push_back("ㅡㄴ");
+    koreanBrailleMap["011101"].push_back("ㅡㄹ");
+    koreanBrailleMap["111110"].push_back("ㅣㄴ");
+    koreanBrailleMap["000111"].push_back("ㄱㅓㅅ"); //  011100
 }
 
 void brailleExceptionInit(map<string, vector<string>>& BrailleEx)

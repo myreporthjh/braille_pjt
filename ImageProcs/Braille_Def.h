@@ -2,6 +2,22 @@
 
 #include "Common.h"
 
+void SpeakText(const wchar_t* text) {
+    CoInitializeEx(NULL, COINIT_MULTITHREADED);
+
+    ISpVoice* pVoice = NULL;
+    HRESULT hr = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_ALL, IID_ISpVoice, (void**)&pVoice);
+
+    if (SUCCEEDED(hr)) {
+        pVoice->Speak(text, 0, NULL);
+        pVoice->WaitUntilDone(INFINITE);
+        pVoice->Release();
+    }
+
+    CoUninitialize();
+}
+
+
 void init_cho(map<string, int>& hangeul_cho)
 {
     hangeul_cho.insert(pair<string, int>("ㄱ", 0));
@@ -83,7 +99,7 @@ void init_jong(map<string, int>& hangeul_jong)
 }
 
 
-void combine_hangul(string ch, string ch2, string ch3)
+wchar_t combine_hangul(string ch, string ch2, string ch3)
 {
     setlocale(LC_CTYPE, "");
 
@@ -103,8 +119,7 @@ void combine_hangul(string ch, string ch2, string ch3)
 
     //wchar_t test = 44912;
     wprintf(L"%lc", abc);
-
-
+    return abc;
 }
 
 vector<string> moum_n{ "110001", // 다음 글자 모음 확인용. 모음 + 모음약자
@@ -172,7 +187,7 @@ vector<string> moum_b{ "110001", // 이전 모음 확인용. 모음 + 가나다�
                        "110100",
                        "110010",
                        "100110",
-                       "010110"  };
+                       "010110" };
 
 vector<string> doinsori{ "000100",
 /*된소리 예외*/           "010100",

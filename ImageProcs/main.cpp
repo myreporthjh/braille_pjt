@@ -26,12 +26,12 @@ int main()
 
 	map<string, vector<string>> koreanBrailleMap;
 	brailleInit(koreanBrailleMap);
-	
+
 	stringstream result, result2;
 	string letter, letter_n, letter_b = ("");
 	int flag = 1;
 	int word_count = sr_sts.size();
-	vector<int> aaa;	
+	vector<int> aaa;
 	aaa.push_back(8);
 	sr_sts.push_back(aaa);	//맨 뒷글자 확인용
 
@@ -40,14 +40,14 @@ int main()
 		result.str("");
 		result2.str("");
 		copy(sr_sts[i].begin(), sr_sts[i].end(), std::ostream_iterator<int>(result, ""));
-		copy(sr_sts[i+1].begin(), sr_sts[i+1].end(), std::ostream_iterator<int>(result2, ""));
+		copy(sr_sts[i + 1].begin(), sr_sts[i + 1].end(), std::ostream_iterator<int>(result2, ""));
 		letter = result.str();
 		letter_n = result2.str();	// 2개짜리 단어일 경우 확인하기 위한 다음 단어
 
 		if (flag == 1)	// 2개짜리 단어가 있을 경우 하나를 스킵하기 위함
 		{
 			//예외 구분 함수
-			add_sts(koreanBrailleMap,letter,letter_n, letter_b, sentence, flag);
+			add_sts(koreanBrailleMap, letter, letter_n, letter_b, sentence, flag);
 			int k = 0;
 		}
 		else
@@ -62,6 +62,7 @@ int main()
 	std::cout << sentence << endl;
 
 	//----- 문자열구분
+	wstring sentece_w;
 	sentence += "       ";
 	queue<string>q;
 	map<string, int> findjung;
@@ -92,7 +93,7 @@ int main()
 					ch3 += tmp;
 					i += 3;
 				}
-				combine_hangul(ch1, ch2, ch3);
+				sentece_w.push_back(combine_hangul(ch1, ch2, ch3));
 				while (!q.empty())q.pop();
 				i += 3;
 			}
@@ -100,7 +101,7 @@ int main()
 			{
 				ch1 = q.front();
 				ch2 = q.back();
-				combine_hangul(ch1, ch2, "x");
+				sentece_w.push_back(combine_hangul(ch1, ch2, ch3));
 				while (!q.empty())q.pop();
 			}
 		}
@@ -111,6 +112,7 @@ int main()
 		}
 	}
 
+	SpeakText(sentece_w.c_str());
 	int a = 0;
 }
 
@@ -189,7 +191,7 @@ void get_bin_data(const Mat& img_gray, vector<vector<int>>& rois)
 			{
 				temp = cut_line[i] - l_btw_jum * 2.5;
 			}
-			Rect region1 = Rect(Point(temp, 0), Point((cut_line[i]+temp) / 2, bin.rows));
+			Rect region1 = Rect(Point(temp, 0), Point((cut_line[i] + temp) / 2, bin.rows));
 			Rect region2 = Rect(Point((cut_line[i] + temp) / 2, 0), Point(cut_line[i], bin.rows));
 			subRegion1 = bin(region1);
 			subRegion2 = bin(region2);
@@ -197,18 +199,18 @@ void get_bin_data(const Mat& img_gray, vector<vector<int>>& rois)
 		else if (i == cut_line.size())
 		{
 			Rect region1 = Rect(Point(cut_line[i - 1], 0),
-								Point(cut_line[i - 1] + l_btw_jum * 1.25, bin.rows));
+				Point(cut_line[i - 1] + l_btw_jum * 1.25, bin.rows));
 			Rect region2 = Rect(Point(cut_line[i - 1] + l_btw_jum * 1.25, 0),
-								Point(cut_line[i - 1] + l_btw_jum * 2.5, bin.rows));
+				Point(cut_line[i - 1] + l_btw_jum * 2.5, bin.rows));
 			subRegion1 = bin(region1);
 			subRegion2 = bin(region2);
 		}
 		else
 		{
 			Rect region1 = Rect(Point(cut_line[i - 1], 0),
-								Point((cut_line[i - 1] + cut_line[i]) / 2, bin.rows));
+				Point((cut_line[i - 1] + cut_line[i]) / 2, bin.rows));
 			Rect region2 = Rect(Point((cut_line[i - 1] + cut_line[i]) / 2, 0),
-								Point(cut_line[i], bin.rows));
+				Point(cut_line[i], bin.rows));
 			subRegion1 = bin(region1);
 			subRegion2 = bin(region2);
 		}
@@ -255,7 +257,7 @@ void add_sts(map<string, vector<string>>& koreanBrailleMap, string letter, strin
 	string str = "111010";
 	if (koreanBrailleMap[letter].size() > 1)
 	{
-		int index=0, i=0;
+		int index = 0, i = 0;
 		div_exc_index(letter, index);
 
 		switch (index)

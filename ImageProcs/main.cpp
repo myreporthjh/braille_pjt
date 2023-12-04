@@ -265,7 +265,7 @@ void add_sts(map<string, vector<string>>& koreanBrailleMap, string letter, strin
 			flag = 0;
 			break;
 		case 2:		// ㅆ,ㅖ
-			check_moum(letter_b, i);
+			check_moum_b(letter_b, i);
 			sts += *(BrailleEx[letter].data() + i);
 			break;
 		case 3:		// ㅅㄲㄸㅆㅉㅃ
@@ -284,7 +284,7 @@ void add_sts(map<string, vector<string>>& koreanBrailleMap, string letter, strin
 			}
 			break;
 		case 5:		// ㄴㄷㅁㅂㅈㅋㅌㅍㅎ
-			check_moum(letter_n, i);
+			check_moum_n(letter_n, i);
 			sts += *(BrailleEx[letter].data() + i);
 			break;
 		default:

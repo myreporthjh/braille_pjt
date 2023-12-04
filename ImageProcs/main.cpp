@@ -5,6 +5,15 @@ void add_sts(map<string, vector<string>>& koreanBrailleMap, string letter, strin
 
 int main()
 {
+	setlocale(LC_CTYPE, "");
+
+	map<string, int> hangeul_cho;
+	map<string, int> hangeul_jung;
+	map<string, int> hangeul_jong;
+	init_cho(hangeul_cho);
+	init_jung(hangeul_jung);
+	init_jong(hangeul_jong);
+
 	std::string filePath_Search = "../KCCImageNet/egukga5.png";
 	cv::Mat src_draw = cv::imread(filePath_Search, cv::ImreadModes::IMREAD_ANYCOLOR);
 	cv::Mat src_draw_gray = cv::imread(filePath_Search, cv::ImreadModes::IMREAD_GRAYSCALE);
@@ -51,6 +60,57 @@ int main()
 	}
 
 	std::cout << sentence << endl;
+
+	//----- 문자열구분
+	sentence += "       ";
+	queue<string>q;
+	map<string, int> findjung;
+	init_jung(findjung);
+	for (int i = 0; i < sentence.length() - 7; i += 2)
+	{
+		string ch1, ch2, ch3;
+		if (sentence[i] != ' ')
+		{
+			string st = sentence.substr(i, 2);
+			q.push(st);
+			auto it = findjung.find(st);
+			if (q.size() == 1 && it != findjung.end())
+			{
+				q.pop();
+				q.push("ㅇ");
+				q.push(st);
+			}
+			else;
+			if (q.size() == 2 && sentence[i + 4] == ',')
+			{
+				ch1 = q.front();
+				ch2 = q.back();
+				ch3 = sentence.substr(i + 2, 2);
+				if (sentence[i + 7] == ',')
+				{
+					string tmp = sentence.substr(i + 5, 2);
+					ch3 += tmp;
+					i += 3;
+				}
+				combine_hangul(ch1, ch2, ch3);
+				while (!q.empty())q.pop();
+				i += 3;
+			}
+			else if (q.size() == 2 && sentence[i + 4] != ',')
+			{
+				ch1 = q.front();
+				ch2 = q.back();
+				combine_hangul(ch1, ch2, "x");
+				while (!q.empty())q.pop();
+			}
+		}
+		else
+		{
+			cout << " ";
+			i--;
+		}
+	}
+
 	int a = 0;
 }
 

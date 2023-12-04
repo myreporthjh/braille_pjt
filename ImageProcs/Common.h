@@ -9,6 +9,9 @@
 #include <fstream> // ofstream header
 #include <format>
 #include <random>
+#include <sstream>
+#include <Windows.h>
+#include <sapi.h>
 
 #define OPENCV_480
 #include <opencv2/opencv.hpp>
